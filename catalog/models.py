@@ -1,9 +1,11 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, unique=True)
+    description = models.TextField(blank=True)
 
     class Meta:
         ordering = ('name',)
@@ -24,6 +26,7 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    manufactured_at = models.DateField(default=timezone.now)
 
     class Meta:
         ordering = ('name',)
@@ -34,6 +37,4 @@ class Product(models.Model):
         return self.name
 
 
-from django.db import models
-
-# Create your models here.
+# миграция
