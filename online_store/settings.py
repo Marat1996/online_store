@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'online_store.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'online_store_db',  # Имя созданной базы данных
+        'USER': 'maratzaripov',  # Замените на ваш пользователь PostgreSQL
+        'PASSWORD': '12345',  # Замените на ваш пароль PostgreSQL
+        'HOST': 'localhost',  # Или IP-адрес сервера PostgreSQL
+        'PORT': '5432',  # Стандартный порт PostgreSQL
     }
 }
 
