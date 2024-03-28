@@ -9,5 +9,5 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('category',)
     search_fields = ('name', 'description')
 
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Category)
 admin.site.register(Product, ProductAdmin)
