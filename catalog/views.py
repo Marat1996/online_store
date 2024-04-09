@@ -42,3 +42,5 @@ def add_to_cart(request):
         return redirect('cart')
     else:
         return redirect('home')
+
+

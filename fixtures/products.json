@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "model": "catalog.Product",
+    "pk": 1,
+    "fields": {
+      "category": 22,
+      "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 1",
+      "slug": "\u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430-product-1",
+      "description": "Description for \u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 1",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.302898+00:00",
+      "updated": "2024-04-09T17:44:59.302926+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.298546+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 2,
+    "fields": {
+      "category": 22,
+      "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 2",
+      "slug": "\u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430-product-2",
+      "description": "Description for \u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 2",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.339409+00:00",
+      "updated": "2024-04-09T17:44:59.339425+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.339068+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 3,
+    "fields": {
+      "category": 22,
+      "name": "\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 3",
+      "slug": "\u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430-product-3",
+      "description": "Description for \u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u0438\u043a\u0430 Product 3",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.340699+00:00",
+      "updated": "2024-04-09T17:44:59.340711+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.340468+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 4,
+    "fields": {
+      "category": 23,
+      "name": "Electronics Product 1",
+      "slug": "electronics-product-1",
+      "description": "Description for Electronics Product 1",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.341766+00:00",
+      "updated": "2024-04-09T17:44:59.341778+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.341528+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 5,
+    "fields": {
+      "category": 23,
+      "name": "Electronics Product 2",
+      "slug": "electronics-product-2",
+      "description": "Description for Electronics Product 2",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.343147+00:00",
+      "updated": "2024-04-09T17:44:59.343158+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.342634+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 6,
+    "fields": {
+      "category": 23,
+      "name": "Electronics Product 3",
+      "slug": "electronics-product-3",
+      "description": "Description for Electronics Product 3",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.344273+00:00",
+      "updated": "2024-04-09T17:44:59.344283+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.344050+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 7,
+    "fields": {
+      "category": 24,
+      "name": "Books Product 1",
+      "slug": "books-product-1",
+      "description": "Description for Books Product 1",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.345366+00:00",
+      "updated": "2024-04-09T17:44:59.345375+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.345163+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 8,
+    "fields": {
+      "category": 24,
+      "name": "Books Product 2",
+      "slug": "books-product-2",
+      "description": "Description for Books Product 2",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.346392+00:00",
+      "updated": "2024-04-09T17:44:59.346401+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.346173+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 9,
+    "fields": {
+      "category": 24,
+      "name": "Books Product 3",
+      "slug": "books-product-3",
+      "description": "Description for Books Product 3",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.347514+00:00",
+      "updated": "2024-04-09T17:44:59.347526+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.347265+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 10,
+    "fields": {
+      "category": 25,
+      "name": "Clothing Product 1",
+      "slug": "clothing-product-1",
+      "description": "Description for Clothing Product 1",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.348592+00:00",
+      "updated": "2024-04-09T17:44:59.348603+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.348370+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 11,
+    "fields": {
+      "category": 25,
+      "name": "Clothing Product 2",
+      "slug": "clothing-product-2",
+      "description": "Description for Clothing Product 2",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.349661+00:00",
+      "updated": "2024-04-09T17:44:59.349670+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.349463+00:00"
+    }
+  },
+  {
+    "model": "catalog.Product",
+    "pk": 12,
+    "fields": {
+      "category": 25,
+      "name": "Clothing Product 3",
+      "slug": "clothing-product-3",
+      "description": "Description for Clothing Product 3",
+      "price": "9.99",
+      "available": true,
+      "created": "2024-04-09T17:44:59.350672+00:00",
+      "updated": "2024-04-09T17:44:59.350682+00:00",
+      "manufactured_at": "2024-04-09T17:44:59.350473+00:00"
+    }
+  }
+]
