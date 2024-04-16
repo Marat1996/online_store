@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product, Cart
+from .models import Product, Cart, Category
 
 
 def home(request):
@@ -11,16 +11,18 @@ def home(request):
     return render(request, 'catalog/home.html', context)
 
 def contacts(request):
-    return render(request, 'catalog/contact.html')
+    return render(request, 'catalog/contacts.html')
 
-def product_detail(request):
-    products = Product.objects.all()
+def product_detail(request, pk):
+    product = Product.objects.get(pk=pk)
     context = {
-        'products': products
+        'product': product
     }
     return render(request, 'catalog/product_detail.html', context)
 
 
+def cart(request):
+    return render(request, 'catalog/cart.html')
 @login_required
 def add_to_cart(request):
     if request.method == 'POST':
@@ -44,3 +46,11 @@ def add_to_cart(request):
         return redirect('home')
 
 
+def category_products(request, slug):
+    category = Category.objects.get(slug=slug)
+    products = Product.objects.filter(category=category)
+    context = {
+        'category': category,
+        'products': products
+    }
+    return render(request, 'catalog/category_products.html', context)
