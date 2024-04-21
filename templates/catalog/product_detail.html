@@ -14,7 +14,7 @@
         <h1>{{ product.name }}</h1>
         <p>{{ product.description }}</p>
         <p>Цена: {{ product.price }} руб.</p>
-        <p>Категория: <a href="{% url 'category_products' product.category.slug %}">{{ product.category.name }}</a></p>
+        <p>Категория: {% if product.category and product.category.slug %}<a href="{% url 'category_products' product.category.slug %}">{{ product.category.name }}</a>{% else %}Неизвестная категория{% endif %}</p>
         <p>Артикул: {{ product.sku }}</p>
         <p>В наличии: {{ product.stock }} шт.</p>
         <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Добавить в корзину</a>
