@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
-    # slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField(blank=True)
 
     # Метод save изменен: теперь он не обрабатывает slug

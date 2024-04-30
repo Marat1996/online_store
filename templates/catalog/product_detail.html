@@ -1,24 +1,26 @@
 {% extends 'catalog/base.html' %}
 
 {% block content %}
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-6">
-        {% if product.image %}
-          <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
-        {% else %}
-          <img src="/static/img/no-image.jpg" alt="{{ product.name }}" class="img-fluid">
-        {% endif %}
-      </div>
-      <div class="col-md-6">
-        <h1>{{ product.name }}</h1>
-        <p>{{ product.description }}</p>
-        <p>Цена: {{ product.price }} руб.</p>
-        <p>Категория: {% if product.category and product.category.slug %}<a href="{% url 'category_products' product.category.slug %}">{{ product.category.name }}</a>{% else %}Неизвестная категория{% endif %}</p>
-        <p>Артикул: {{ product.sku }}</p>
-        <p>В наличии: {{ product.stock }} шт.</p>
-        <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Добавить в корзину</a>
-      </div>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      {% if product.image %}
+      <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+      {% else %}
+      <img src="/static/img/no-image.jpg" alt="{{ product.name }}" class="img-fluid">
+      {% endif %}
+    </div>
+    <div class="col-md-6">
+      <h1>{{ product.name }}</h1>
+      <p>{{ product.description }}</p>
+      <p>Цена: {{ product.price }} руб.</p>
+      <p>Артикул: {{ product.slug }}</p>
+      <p>Дата производства: {{ product.manufactured_at|date:"d.m.Y" }}</p>
+      <p>Статус: {% if product.available %}В наличии{% else %}Нет в наличии{% endif %}</p>
+      <p>Создано: {{ product.created|date:"d.m.Y" }}</p>
+      <p>Обновлено: {{ product.updated|date:"d.m.Y" }}</p>
+      <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Добавить в корзину</a>
     </div>
   </div>
+</div>
 {% endblock %}
