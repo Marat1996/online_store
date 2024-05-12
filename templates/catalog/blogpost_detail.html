@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ blog_post.title }}</h1>
+    <p>{{ blog_post.created_at }}</p>
+    <p>Views: {{ blog_post.views_count }}</p>
+    {% if blog_post.preview_image %}
+        <img src="{{ blog_post.preview_image.url }}" alt="{{ blog_post.title }}">
+    {% endif %}
+    <p>{{ blog_post.content }}</p>
+{% endblock %}

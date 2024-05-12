@@ -1,14 +1,13 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
-
+from django.utils.text import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField(blank=True)
 
-    # Метод save изменен: теперь он не обрабатывает slug
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
@@ -56,3 +55,21 @@ class Cart(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.product.name}"
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
+    content = models.TextField()
+    preview_image = models.ImageField(upload_to='blog_images', null=True, blank=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    is_published = models.BooleanField(default=False)
+    views_count = models.PositiveIntegerField(default=0)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
