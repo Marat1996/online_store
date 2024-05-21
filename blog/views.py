@@ -26,7 +26,7 @@ class BlogPostDetailView(DetailView):
 
 class BlogPostCreateView(CreateView):
     model = BlogPost
-    template_name = 'blog/blogpost_form.html'
+    template_name = 'catalog/blogpost_form.html'
     fields = ['title', 'content', 'preview_image', 'is_published']
     success_url = reverse_lazy('blog:list')
 
